@@ -1,0 +1,41 @@
+// COLORS
+$color-primary: #5573c5;
+$color-primary-light: #6fd5d5;
+$color-primary-dark: #221941;
+$color-secondary-light: #eecf7b;
+$color-secondary-dark: #422a1c;
+$color-tertiary-light: #b8d7ee;
+$color-tertiary-dark: #693e32;
+$color-grey-light-1: #f7f7f7;
+$color-grey-light-2: #eee;
+$color-grey-dark: #777;
+$color-grey-dark-2: #999;
+$color-grey-dark-3: #333;
+$color-white: #fff;
+$color-black: #000;
+$color-black-light: rgb(50,22,44);
+$color-black-light-1: rgb(50,77,44);
+// FONT
+$default-font-size: 1.6rem;
+// GRID
+$grid-width: 114rem;
+$gutter-vertical: 8rem;
+$gutter-vertical-small: 6rem;
+$gutter-horizontal: 6rem;
+
+
+$primary-color: color("materialize-red", "lighten-2") !default;
+$primary-color-light: false !default;
+$primary-color-dark: false !default;
+// @if not $primary-color-light {
+//     $primary-color-light: lighten($primary-color, 15%);
+// }
+
+// @if not $primary-color-dark {
+//     $primary-color-dark: darken($primary-color, 15%);
+// }
+
+$secondary-color: color("teal", "lighten-1") !default;
+$success-color: color("green", "base") !default;
+$error-color: color("red", "base") !default;
+$link-color: color("light-blue", "darken-1") !default;

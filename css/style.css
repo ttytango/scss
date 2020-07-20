@@ -1,0 +1,232 @@
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-10rem);
+    -webkit-transform: translateX(-10rem);
+    -moz-transform: translateX(-10rem);
+    -ms-transform: translateX(-10rem);
+    -o-transform: translateX(-10rem); }
+  80% {
+    transform: translateX(2rem);
+    -webkit-transform: translateX(2rem);
+    -moz-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    -o-transform: translateX(2rem);
+    opacity: 0.8; }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+@keyframes moveInLeftRev {
+  0% {
+    opacity: 0.2;
+    transform: translateX(-10rem);
+    -webkit-transform: translateX(-10rem);
+    -moz-transform: translateX(-10rem);
+    -ms-transform: translateX(-10rem);
+    -o-transform: translateX(-10rem); }
+  20% {
+    transform: translateX(2rem);
+    -webkit-transform: translateX(2rem);
+    -moz-transform: translateX(2rem);
+    -ms-transform: translateX(2rem);
+    -o-transform: translateX(2rem);
+    opacity: 0.8; }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  font-size: 62.5%; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) and (max-width: none) {
+    html {
+      font-size: 65%; } }
+
+body {
+  box-sizing: border-box;
+  padding: 2rem; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
+
+.heading-primary {
+  box-sizing: border-box;
+  color: #fff;
+  text-transform: uppercase;
+  backface-visibility: hidden;
+  text-shadow: 2px 2px 4px black;
+  margin-bottom: 4rem; }
+  .heading-primary--main {
+    display: block;
+    font-size: 6rem;
+    font-weight: 400;
+    letter-spacing: 3.5rem;
+    animation-name: moveInLeft;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--main {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
+  .heading-primary--sub {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    letter-spacing: 2rem;
+    animation-name: moveInLeftRev;
+    animation-duration: 1s;
+    animation-timing-function: ease-in; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        letter-spacing: 1rem;
+        font-family: 5rem; } }
+
+.paragraph {
+  font-size: 1.6rem; }
+  .paragraph:not(:last-child) {
+    margin-bottom: 3rem; }
+
+.u-center-text {
+  text-align: center !important; }
+
+.u-margin-bottom-small {
+  margin-bottom: 1.5rem !important; }
+
+.u-margin-bottom-medium {
+  margin-bottom: 4rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-medium {
+      margin-bottom: 3rem !important; } }
+
+.u-margin-bottom-big {
+  margin-bottom: 8rem !important; }
+  @media only screen and (max-width: 56.25em) {
+    .u-margin-bottom-big {
+      margin-bottom: 5rem !important; } }
+
+.u-margin-top-big {
+  margin-top: 8rem !important; }
+
+.u-margin-top-huge {
+  margin-top: 10rem !important; }
+
+.btn {
+  padding: 1.6rem 4rem; }
+
+.feature-box {
+  position: relative;
+  margin-top: 0%;
+  margin-bottom: -10rem;
+  min-width: 20rem;
+  display: grid;
+  grid-template-rows: repeat(2, 1fr) minmax(250px, 2fr);
+  grid-template-columns: 1fr repeat(3, 1fr);
+  justify-items: flex-start;
+  gap: 2rem;
+  grid-row-end: span 3; }
+  .feature-box .card {
+    position: inherit;
+    z-index: 5;
+    flex-direction: row;
+    border-radius: 2px;
+    min-width: 240px;
+    padding: 1rem 0.5rem;
+    box-shadow: 1px 1px 6px rgba(62, 68, 40, 0.77);
+    margin-top: 2rem;
+    background-color: rgba(78, 40, 37, 0.383); }
+    .feature-box .card__text-box {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute; }
+    .feature-box .card__list {
+      list-style-type: none; }
+    .feature-box .card:hover {
+      transform: translate3d(2rem, -1rem, -10rem);
+      transition: all .5s;
+      backface-visibility: hidden; }
+    .feature-box .card:not(:hover) {
+      filter: hue-rotate(220deg);
+      transition: all .8s; }
+
+.nav-wrapper {
+  background: linear-gradient(to bottom, rgba(50, 22, 44, 0.4) 20%, rgba(0, 0, 0, 0.4) 60%);
+  backface-visibility: hidden;
+  font-family: 'Roboto', sans-serif;
+  padding-left: 2rem;
+  box-shadow: 1px 4px 4px #000;
+  text-shadow: 2px 1px 6px #324d2c;
+  font-weight: 600;
+  text-transform: uppercase; }
+  .nav-wrapper div {
+    background-color: none; }
+  .nav-wrapper span {
+    font-size: 18px; }
+  .nav-wrapper .dropdown-content {
+    background: #000; }
+    .nav-wrapper .dropdown-content:hover {
+      filter: hue-rotate(10deg) contrast(0.8); }
+    .nav-wrapper .dropdown-content a {
+      font-size: 12px;
+      background: #324d2c; }
+
+.header {
+  height: 95vh;
+  background-image: linear-gradient(to right, rgba(111, 213, 213, 0.3), rgba(105, 62, 50, 0.2)), url(../img/wires.jpg);
+  background-position: 20% 55%;
+  backdrop-filter: sepia(0.6);
+  background-color: to bottom, fade(#777777, 0.9);
+  position: relative; }
+  .header__logo-box {
+    filter: opacity(0.6) blur(-4px) !important;
+    backface-visibility: hidden;
+    clip-path: ellipse(240px 240px at 25% 20%);
+    border-radius: 4px;
+    height: auto;
+    width: auto;
+    max-width: 300px;
+    max-height: 300px;
+    position: absolute;
+    -webkit-filter: opacity(0.7) hue-rotate(-10deg) contrast(1.4);
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px; }
+  @supports (clip-path: polygon(0 0)) or (-webkit-clip-path: polygon(0 0)) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 50vh, 0 100%); } }
+  .header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    position: absolute; }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em), only screen and (min-width: 125em) {
+    .header {
+      background-image: linear-gradient(to right, rgba(111, 213, 213, 0.4), rgba(34, 25, 65, 0.6)), url(../img/wires.jpg); } }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em) and (max-width: 37.5em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) and (max-width: 37.5em), only screen and (min-width: 125em) and (max-width: 37.5em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      transform: scale(10%); } }
+  @media only screen and (min-resolution: 192dpi) and (min-width: 37.5em) and (max-width: 56.25em), only screen and (-webkit-min-device-pixel-ratio: 2) and (min-width: 37.5em) and (max-width: 56.25em), only screen and (min-width: 125em) and (max-width: 56.25em) {
+    .header {
+      -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+      transform: scale(10%); } }
